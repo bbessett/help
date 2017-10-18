@@ -225,7 +225,7 @@ img +
 			font-size: 0!important;
 		}
 
-		h2,h1,
+		h2,h1, 
 		p {
 			color: inherit;
 			font-family: "IntroRegular", sans-serif;
@@ -256,7 +256,7 @@ img +
 		@include breakpoint(1197) {
 		    font-size: 1.75em;
 		}
-		}
+		} 
 		h2.emphasisO {
 			font-size: 2.250em;
 			line-height: 1.143;
@@ -264,22 +264,23 @@ img +
 			font-family: "IntroLight",sans-serif;
 			letter-spacing: 0.013em;
 			color:#fff;
-    		margin: 0 0 5px;
+    		margin: 0 0 5px; 
     		text-align:center;
-    		@include breakpoint(1197) {
-		    font-size:1em;
-		}
+    		@include break($small) {
+		    font-size:38px;      
+			} 
+		
 		span {			
 			font-family: "IntroSemiBold" !important;
 		}
 
-		}
+		} 
 
 
 		p {
 			line-height: inherit;
 		}
-	}
+	} 
 
 	.btn-lg {
 		font-size: 1.1em;

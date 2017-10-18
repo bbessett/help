@@ -10,17 +10,17 @@
 html {
   font: normal normal $body-font-weight #{$body-font-size}/#{$body-line-height} $body-font-family;
   user-select: initial;
-} 
+}  
 body {
 background-color: #{$background1};
-
+ 
 
   // background-repeat: repeat-x;
   // @include background( linear-gradient(top, $background1 0%, $background2 100%) );
 
   // .csspie & { 
   //  -pie-background: linear-gradient(top, $background1 0%, $background2 100%);
-  // }
+  // } 
 
 
   // background-repeat: repeat-x;

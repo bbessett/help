@@ -1,0 +1,204 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+/*!
+ * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+
+ .container  {
+background:#fff;
+}
+.navbar {
+    .container {
+        background:transparent;
+    }
+}
+
+section { 
+    .container  {
+    @include break($small) {
+    padding:60px 40px 0 40px;
+    }
+    border-bottom:2px solid #cacacc;
+    
+    }
+}
+
+
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        background:#f9f9f9;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+    .parallaxParent {
+        // height: 100vh;
+            height: 400px;
+            max-height:320px;
+            overflow: hidden;
+    }
+    .parallaxParent > * {
+        height: 200%;
+        position: relative;
+        top: -100%;
+    }
+
+
+.img-slide {
+    max-height: 410px;
+    overflow: hidden;
+    @include break($small) {
+   &:hover {
+ 
+    // -webkit-transform: translate(350px,0); /** Chrome & Safari **/
+    // -o-transform: translate(350px,0); /** Opera **/
+    // -moz-transform: translate(350px,0); /** Firefox **/
+    }
+    img {
+        position: relative;
+        transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
+        -moz-transition: all 1s ease-in-out; /** Firefox **/
+        -o-transition: all 1s ease-in-out; /** Opera **/
+    }
+    img:hover {
+        transform: translate(0,-90px);
+     
+    }
+}
+}
+
+
+
+.quicklinks-section {
+    height: auto;
+    text-align: center;
+    img.secondary-img {
+      margin-top: -110px; 
+      width: 64%;
+      margin-bottom: -7px;
+    }
+
+       img.secondary-img-left {
+         width: 64%;
+
+       }
+
+}
+
+.categories-section { 
+    text-align: center;
+    h1 {
+    text-align: center;
+    }
+    .cat-icon-row { 
+        padding:0 120px;
+    }
+    .cat-thumb-wrap {
+        padding:10px 0 50px;
+        a {
+        display:inline-block;
+        width:100%; 
+        a:nth-child(2) {
+            padding:20px 0px  10px;
+        }
+    }
+    img {
+        max-width:250px;
+        display: inline-block;
+    }
+}
+}
+
+section.video-gallery {
+    // height: 100%;
+        .container {
+    padding-top:20px;
+    background-color: #000;
+
+    h2 {
+        text-align: center;
+        margin-bottom:40px;
+        margin-top:20px;
+    }
+    color:#fff;
+    }
+}
+
+.support-section {
+    .container {    
+        background-color:#fff;
+        padding-top: 20px;
+     padding-bottom: 60px;
+   }  
+}
+
+
+div.support-icon {
+text-align:center;
+a {
+  font-family:$IntroSemiBold;
+      overflow-wrap: break-word;
+      text-decoration: none;
+ }
+a.ico-link:hover {
+  text-decoration: none;
+}
+ em, span {
+    font-size:128px;
+    color:#000;
+  display:block;
+  max-height: 90px;
+  line-height:0;
+
+}
+
+}
+.single-cat-support { 
+    .inner-divide {
+        border-right:1px solid #ccc;
+    }
+    div.support-icon {
+    span {
+      color:$text-blue;  
+    }
+    h4 {
+    margin-top:10px;
+    color:$text-blue;
+    padding:0 10px;
+    }
+}
+}
+/// old boostrap media queries
+@media (min-width: 992px) {
+.col-md-offset-2 {
+    margin-left: 16.66666667%;
+}
+}
+
+@media (min-width: 768px) {
+.col-sm-offset-1 {
+    margin-left: 8.33333333%;
+}
+}
+ 
+
+
+

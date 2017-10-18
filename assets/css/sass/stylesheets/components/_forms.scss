@@ -1,0 +1,695 @@
+/* ========================================================================== */
+/*   Forms                                                                    */
+/* ========================================================================== */
+
+form {
+	font-size: $body-font-size;
+	line-height: 1.33;
+
+	label {
+
+		&[for] {
+			cursor: pointer;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	strong {
+
+		&.required {
+
+			&:after {
+				content: '\002a';
+				color: $form-color-red;
+				margin-left: .5ex;
+			}
+		}
+	}
+
+	p,
+	label {
+
+		&.required {
+
+			&:before {
+				content: '\002a';
+				color: $form-color-red;
+			}
+		}
+	}
+
+	p {
+
+		&.required {
+			font-size: 85%;
+		}
+	}
+
+	label {
+
+		&.required {
+			position: relative;
+
+			&:before {
+				position: absolute;
+				right: -1ex;
+			}
+		}
+	}
+
+	p {
+		color: #000;
+
+		&.required {
+			color: $form-color-red;
+			font-weight: 500;
+
+			&:before {
+				margin-right: .5ex;
+			}
+		}
+	}
+
+	// .noMargin {
+	// 	margin: 0;
+	// }
+
+	.sign-title {
+		padding: 0 15px;
+	}
+
+	.btn {
+		padding: 10px 40px;
+	}
+
+	.data {
+		margin: 0 14px;
+		padding: 3px 11px 20px 15px;
+
+		h3 {
+			margin-bottom: 5px;
+		}
+
+		.tab-pane {
+
+			ul {
+				padding-left: 80px;
+			}
+		}
+
+		li {
+			font-weight: 700;
+		}
+	}
+
+	.invalid-user {
+		display: none;
+	}
+
+	.form-group,
+	.form-horizontal {
+		float: none;
+	}
+
+	.form-group {
+
+		> label {
+			font-size: 115%;
+
+			&[for] {
+
+				&:after {
+					content: '\003a\000a';
+				}
+			}
+		}
+
+		.add {
+
+			&:before {
+				content: '\002b\000a';
+			}
+		}
+
+		#securityQuestion{
+		    float: left;
+    		width: 100%;
+    		padding: 10px 0;
+    		font-weight: 400;
+		}
+	}
+
+	.form-horizontal {
+
+		> .form-group {
+			float: left;
+			margin: 0 0 15px;
+			padding-left: 7px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			select,
+			textarea,
+			input[type=text],
+			input[type=password],
+			input[type=datetime],
+			input[type=datetime-local],
+			input[type=date],
+			input[type=month],
+			input[type=time],
+			input[type=week],
+			input[type=number],
+			input[type=email],
+			input[type=url],
+			input[type=search],
+			input[type=tel],
+			input[type=color],
+			input[type=search],
+			input[type=range],
+			.uneditable-input {
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	.form-group,
+	.form-horizontal,
+	.editor-field,
+	.inline-box {
+		padding: 0;
+	}
+
+	.radio {
+
+		.list-dashed {
+			margin-top: 1ex;
+		}
+	}
+
+	.monetary_amount {
+		@include appearance(textfield);
+		//font-size: 1em;
+		font-size: 100%;
+		line-height: 1.6;
+
+		&:before {
+			content: '\0024';
+			float: left;
+			font-weight: 700;
+			margin-right: .5ex;
+		}
+	}
+
+	.multiple-choice {
+		font-size: 0;
+
+		label {
+			display: block;
+			padding-left: 16px;
+		}
+
+		.form-group {
+			padding-left: 0;
+			padding-right: 30px;
+		}
+
+		input[type=radio],
+		.form-group {
+			@include inline-block(top);
+			float: none;
+			font-size: $body-font-size;
+		}
+
+		input[type=radio],
+		input[type=text],
+		input[type=number] {
+			margin-left: -16px;
+		}
+
+		input[type=text],
+		input[type=number] {
+			width: 6ex!important;
+		}
+	}
+
+	.additional-questions {
+		//font-size: 1.2em;
+		font-size: 120%;
+		line-height: 4;
+
+		@include breakpoint(mobile) {
+			//font-size: 1em;
+			font-size: 100%;
+		}
+
+		> a {
+			background-color: $button-gray;
+			color: inherit;
+			cursor: pointer;
+			display: block;
+			padding: 0 3ex;
+			text-decoration: none;
+
+			&:after {
+				content: '\002b';
+				float: right;
+			}
+		}
+	}
+
+	.agreement {
+
+		textarea {
+			width: 100%;
+			max-height:250px;
+		}
+	}
+
+	.buttons {
+		@include inline-block(top);
+
+		@include breakpoint(mobile) {
+			display: block;
+			width: 100%;
+		}
+
+		&:after {
+			content: "\000a\000d";
+			display: block;
+			height: 0;
+			visibility: hidden;
+		}
+
+		button,
+		input[type=button],
+		.btn {
+			float: right;
+
+			@include breakpoint(mobile) {
+				float: none;
+				margin-top: 10px;
+				width: 100%!important;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.number-spin-btn-container {
+		display: none;
+		position: absolute; /* Numbers polyfill */
+	}
+
+	.module &.row {
+
+		@include breakpoint(mobile) {
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+	}
+
+	.error {
+		/* Errors */
+		@include appearance(none !important);
+		background: none!important;
+		@include border-radius($radius);
+		border: 0 none!important;
+		color: $form-text-red;
+		display: none;
+		height: auto;
+		margin: 0 0 0 3px;
+		padding: 0;
+		text-indent: 0 !important;
+		text-overflow: clip;
+	}
+
+	.ui-state-error {
+		outline: 0 none !important;
+		position: relative;
+
+		+ .error {
+			display: block;
+		}
+	}
+}
+fieldset {
+
+	a {
+		// color: $button-orange;
+		text-decoration: underline;
+	}
+
+	.email {
+		clear: both;
+	}
+}
+select {
+	border-color: $form-field-border-color;
+	line-height: 1 !important;
+
+	.multiplebgs & {
+		@include appearance(textfield);
+		padding-right: 30px;
+		text-indent: 0.01px;
+		text-overflow: "";
+	}
+
+	.lt-ie10.multiplebgs & {
+		padding-right: 6px !important;
+	}
+
+	.ie &::-ms-expand {
+		display: none;
+	}
+}
+select,
+input,
+textarea {
+
+	&.ui-state-error {
+		@include box-shadow(0 0 10px 0 rgba(255,0,0,.5)!important);
+		border-color: $form-text-red !important;
+		font-family: "IntroRegular";
+		border: 3px double #D74025;
+
+		&.csspie {
+			border-color: $form-field-border-color !important;
+		}
+	}
+}
+ .error {
+ 	font-size:14px;
+	&:before {
+		position: relative;
+		left: -4px !important;
+		top: 7px;
+		color: #D74025;
+		font-size: 28px;
+		font-family: "tu-icon-font" !important; 
+		content: "A" !important;
+		line-height: 15px;
+	}	
+}
+
+.multiplebgs.svg select {
+background: transparent url("../img/arrow-white.png") no-repeat scroll 100% 25% !important;	
+border: 1px solid $form-field-border-color;
+
+}
+@-moz-document url-prefix() {
+.multiplebgs.svg select {
+background:none !important;	
+border: 1px solid $form-field-border-color;
+  }
+} 
+
+.multiplebgs.svg select:hover {
+background: transparent url(../img/arrow-blue.png)  no-repeat scroll 100% 25% !important;
+}
+
+@-moz-document url-prefix() {
+.multiplebgs.svg select:hover {
+background: none !important;	
+border: 1px solid $form-field-border-color;
+  }
+}
+
+.multiplebgs.svg select:active, .multiplebgs.svg select:focus {
+background: transparent url("../img/arrow-yellow.png") no-repeat scroll 100% 25% !important;
+}
+@-moz-document url-prefix() {
+.multiplebgs.svg select:active, .multiplebgs.svg select:focus {
+background:none !important;
+}
+}
+
+
+select,
+input[type=text],
+input[type=number],
+input[type=file],
+.form-control {
+	height: 30px;
+	@include border-radius($radius);
+	font-family: "IntroRegular";
+}
+
+input:hover, input:focus,input:active, textarea:hover,textarea:focus,textarea:active, 
+.form-control:focus
+{
+	@include border-radius($radius);
+	background:$form-field-bg-hover-color !important;
+	border-color:$form-field-border-hover-color !important;
+	@include box-shadow(0 1px 1px rgba(0,0,0,.075) inset);
+}
+select:active {
+	border-color:$form-field-border-hover-color !important;
+	@include box-shadow(0 1px 1px rgba(0,0,0,.075) inset);
+}
+
+
+
+
+select,
+textarea,
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+.uneditable-input {
+	@include border-radius($radius);
+	@include inline-block;
+	color: inherit;
+	//font-size: 1em;
+	font-size: 100%;
+	margin-bottom: 10px;
+	padding: 4px 6px;
+
+}
+textarea,
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+.uneditable-input {
+	@include box-shadow(0 1px 1px rgba(0,0,0,.075) inset);
+	@include transition(border .5s linear, box-shadow 1s linear);
+	border: 1px solid $form-field-border-color;
+}
+input[type=number] {
+	@include appearance(textfield);
+	text-align: left!important;
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		@include appearance(none);
+		margin: 0;
+	}
+
+	&::-o-inner-spin-button,
+	&::-o-outer-spin-button {
+		@include appearance(none);
+		margin: 0;
+	}
+}
+input[type=radio],
+input[type=checkbox] {
+	height: auto;
+	width: auto;
+
+	&.ui-state-error {
+
+		&:before {
+			@include border-radius($radius);
+			@include box-shadow(0 0 10px 0 rgba(255,0,0,.5)!important);
+			border: 1px solid $form-text-red;
+			bottom: 0;
+			content:'';
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+
+		}
+
+		.csspie & {
+
+			&:before {
+				-pie-border-radius: 0;
+			}
+		}
+	}
+}
+input[type=checkbox] {
+	margin-right: 10px;
+	width: auto!important;
+	display: inline-block;
+	
+	
+
+	+ label {
+		@include inline-block;
+		color: #000;
+		cursor: pointer;
+		position: relative;
+	}
+}
+textarea {
+	@include opaque;
+	background-color: $white;
+	line-height: 1.67;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	resize: none;
+}
+button,
+input[type=button] {
+	@include border-radius($radius);
+	// @include text-shadow(0 -1px 1px rgba(0,0,0,.25));
+	background: #eb8832;
+	border: 0 none;
+	color: $white !important;
+	float: left;
+	font-size: 12px;
+	font-weight: 700;
+	margin-right: 10px;
+	padding: 2px 8px;
+	width: auto!important;
+}
+.list-dashed {
+	list-style: none;
+	padding: 0;
+
+	li {
+
+		&:before {
+			content: '\002d';
+			margin-right: 1ex;
+		}
+	}
+}
+ul.verify {
+	margin: 10px 0;
+	padding-left: 0;
+
+	li {
+		list-style-type: none;
+	}
+}
+
+/* ======== DANIEL Additional Styles for Landlord Account Page 4/11/14 ======== */
+
+.width90 {
+	width: 90%;
+}
+
+#Cancel {
+	color: #535353!important;
+}
+
+/* ======== Daniel Additional Styles for Create Account Page 4/15/14 ========== */
+
+h2.marginB0 {
+	margin-bottom: 0;
+}
+
+.rental-info {
+	font-weight: 700;
+
+	p {
+		margin: 0;
+	}
+}
+
+.dynamicInfo {
+	color: $light-gray;
+}
+
+/* ======== Daniel Temporary Form CheckBox =================================== */
+
+.radio {
+
+	.checkboxModified {
+
+		&:before {
+			display: none;
+			margin-right: 0;
+		}
+
+		input[type=checkbox] {
+			left: -.5ex;
+			margin-right: 1.5ex;
+			position: relative;
+		}
+	}
+
+	.noMargin {
+		margin-left: -11px;
+	}
+}
+
+/* ======== Additional Form Styles =========================================== */
+
+
+p .error,
+.orangeText,
+.login_failed {
+	color: #f8951d;
+	font-weight: 500;
+}
+
+
+
+.login_failed {
+	margin: 10px 0;
+}
+
+
+.login_form .alert {
+	margin-top: 15px;
+}
+/* ======== New Brand Alert Styles =========================================== */
+.inner {padding: 20px 0;}
+.alert {padding:15px 15px 15px 15px;}
+.alert-success {color:#00A6CB; background-color:transparent; border-color:#008A00; @include border-radius($radius);}
+.alert-warning {color: #000; background-color:#FFF; border-color: #FCD800; 	@include border-radius($radius);}
+.alert-danger { color: #D74025; background-color:#FFF; border-color:#D74025; @include border-radius($radius); }
+.success:before { position:relative; left:0px; top:10px; font-family: "tu-icon-font" !important; color:#00A6CB; font-size:36px; content: "b"; margin-right: 15px; margin-left: -8px;}
+.danger:before { position:relative; left:0px; top:10px; font-family: "tu-icon-font" !important; color:#D74025; font-size:36px; content: "A"; margin-right:15px; }
+.warning:before { position:relative; left:0px; top:10px; font-family: "tu-icon-font" !important; color:#000; font-size:36px; content: "E"; margin-right:15px;}
+
+
+.alert-success .alert-link { color:#008A00; text-decoration:underline; font-weight:400; }
+.alert-warning .alert-link { color: #000; text-decoration:underline; font-weight:400; }
+.alert-danger .alert-link { color: #D74025; text-decoration:underline; font-weight:400; }
+ 

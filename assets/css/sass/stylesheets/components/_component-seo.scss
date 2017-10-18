@@ -1,0 +1,56 @@
+#applicant-insights {
+        h2 {
+            text-align: center;
+    }
+    h3 {
+    .blue-underline {
+        display:inline-block;
+        @include break($small) {
+        line-height: 13px;
+        }
+
+
+    }
+    }
+    .container {
+        background-color:$gray-medium;
+        padding: 20px 30px 40px;
+        @include break($small) {
+            padding: 20px 200px 40px;
+        } 
+
+    }
+    .content {
+        display: inline-block;
+        width:100%;
+        @include break($small) {
+            vertical-align: top;
+            display: table;
+        }
+
+    .icon {
+  
+        text-align: center;
+        height:auto;
+        display:inline-block;
+        height: 50px;
+        width:100%;
+        font-size: 118px;
+        color:$brand-primary;
+        @include break($small) {
+            width:auto;
+            display: table-cell;
+            text-align: left;
+            width:auto;
+        }
+    }
+    .text-content {
+        @include break($small) {
+    display: table-cell;
+    text-align:left;
+        }
+        text-align: center;
+    }
+}
+
+} 

@@ -1,0 +1,60 @@
+#intro {
+.img-bt-wrap {
+
+ 
+    @include break($small) {
+        height: 440px;
+        position: relative;
+        width: 50%;
+    } 
+    @include break($medium-only) {
+        height: 380px;
+    } 
+    img {
+        bottom: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        @include break($small) {
+        position: absolute;
+        }
+        margin: auto auto 0;
+    }
+}
+}
+
+//paralax hero 
+.intro-section {
+    .container {
+           background: #262626;
+           color:#fff;
+           padding-top:20px;
+       .parallax-window {
+       min-height: 365px;
+   }
+.sc {
+        padding-left:30px;
+        padding-right:30px;
+}
+@include break($small) {
+h1 {
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom:20px;
+}
+}
+
+h5 {
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom:20px;
+}
+.btn-hero {
+    margin-bottom:20px;
+}
+ }
+padding-top:0px;
+text-align: center;
+}

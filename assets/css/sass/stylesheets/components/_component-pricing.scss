@@ -1,0 +1,175 @@
+/* ==========================================================================
+	Component Pricing
+============================================================================= */
+
+.component-pricing {
+    margin: 0;
+
+    .price-table {
+        display: flex;
+        margin: 20px 0 40px 0;
+        @include break($medium) {
+            // margin: 20px 150px 40px 150px;
+        }
+        .price-col {
+            float: left;
+            flex: 1;
+            flex-grow: 1;
+            text-align: center;
+            padding-left: 0;
+            margin-bottom: 0;
+            border: 5px solid $gray-light;
+       
+            h4 {
+                font-size: 3.5rem;
+            }
+            h6 {
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            @include break($small) {
+                border: 0;
+            }
+            &:first-child {
+                flex-grow: 2;
+                text-align: left;
+            }
+            &.recommended {
+                border: 5px solid $brand-warning;
+                .price-row-head {
+        
+                    margin-top: 0;
+                    @include break($small) {
+                        height: 100px;
+               
+                    }
+                }
+            }
+        }
+        .price-row {
+            list-style-type: none;
+            padding: 10px 30px;
+            height: 65px;
+            @include break($small-down) {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 5px 30px;
+                height: auto;
+            }
+            @include break($small) {
+                padding: 15px 10px 15px 0;
+                border-top: 1px solid $gray-light;
+            }
+            &:last-child {
+                margin-bottom: 20px;
+                @include break($small) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        .price-row-head {
+            list-style-type: none;
+            padding: 15px 30px 0;
+            h6 {
+                font-size: 14px;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+            h3 {
+                font-size: 50px;
+                font-weight: 300;
+                margin-top: 28px;
+                margin-bottom: 0;
+                @include break($small) {
+                    margin-top: 0;
+                    font-size: 34px;
+                }
+            }
+            @include break($small) {
+                padding: 15px 0;
+                height: 105px;
+                margin-top: 35px;
+            }
+        }
+        .price-row-title {
+            list-style-type: none;
+            margin: 0;
+            height: 35px;
+            background: $brand-warning;
+            padding: 5px;
+            font-weight: 700;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        span.icon-check {
+            font-size: 55px;
+            position: relative;
+            top:10px;
+            color: $brand-primary;
+            display: inline-block;
+            @include break($small) {
+                font-size: 65px;
+                top: -7px;
+                position: relative;
+            }
+        }
+        h5 {
+            margin-bottom: 0;
+            font-family: $IntroBold;
+            display: inline-block;
+            margin-top: 8px;
+            margin-left: 10px;
+            @include break($small) {
+                margin-top: 0; 
+                margin-left: 0;
+            }
+        }
+        &.price-table-mobile {
+            @include break($small) {
+                display: none;
+            }
+        }
+    }
+    .price-desc {
+        @include break($medium) {
+        padding-top: 100px;
+        p {
+            padding-bottom:40px;
+        }
+        }
+        padding-bottom:80px;
+            
+    }
+    hr {
+        margin: 30px 0 60px;
+    }
+}
+
+/* ==========================================================================
+	Component
+============================================================================= */
+
+.component {
+    padding: 40px 0;
+    margin: 0;
+    background: $white;
+    i.lg {
+        color: $brand-primary;
+        font-size: 140px;
+        line-height: 140px;
+        margin-bottom: 20px;
+    }
+    .component-img-pull {
+        @include break($medium) {
+            padding-left: 20px;
+            margin-top: -80px;
+        }
+    }
+    .component-img-push {
+        @include break($medium) {
+            margin-bottom: -40px;
+        }
+    }
+}

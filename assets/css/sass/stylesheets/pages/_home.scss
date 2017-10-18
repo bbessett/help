@@ -1,0 +1,484 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+
+
+.carousel-caption {
+  padding-bottom:120px;
+  right:15%;
+  left:15%;
+  
+  h1 {
+    position: absolute;
+    // bottom: 290px;
+    // font-size: 38px;
+    width: 100%;
+    text-align:center;
+  } 
+}
+  ul.feature-links {
+    list-style: none;
+    text-align: left;
+    font-size: 24px;
+    line-height: 60px;
+ }  
+
+.gal-row {
+	margin-top:20px;
+}
+.gal-item {
+	margin-bottom:20px;
+  p {
+    font-family:$IntroSemiBold;
+  }
+	.yellow-bg {
+
+		display: table;
+    	min-height: 100%;
+		width: 	100%;
+		text-align: center;
+
+		> a {
+			   display: table-cell;
+			   vertical-align: middle;
+			   padding:10px;
+			   color:#000; 
+			   font-weight:900;
+			   font-size: 20px;
+		}
+	}
+}
+
+a.gal-img-link  { 
+	overflow:hidden;
+	width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+	span.play-icon {
+	  position:absolute;
+	  left: 0;
+	  top: 0;
+	  right: 0;
+	  filter:alpha(opacity=50);
+	  -moz-opacity:0.5;
+	  -khtml-opacity: 0.5;
+	  opacity: 0.5;
+	  transition: opacity 0.5s;
+	  -webkit-transition: opacity .25s ease-in-out;
+  	  height:100%;
+	  img {
+	    top: 19%;
+	  	position:relative;
+	  }
+}
+img.gal-img {
+	  opacity: 0.5;
+}
+}
+
+a.gal-img-link:hover {   
+ span.play-icon {
+	opacity: 1;
+}
+img.gal-img {
+opacity: 0.8;
+}
+}
+.yellow-bg {
+background-color:#fcd800;
+max-height:100%;
+}
+
+/* ========================================================================== */
+/*   Home Slider                                                              */
+/* ========================================================================== */
+
+.jcarousel {
+	$margin: 2.308em;
+	font-family: "IntroRegular", sans-serif;
+	border-bottom: $jcarousel-border;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.43);
+
+	&,
+	img {
+		width: 100%;
+	}
+
+	ul,
+	li {
+		position: relative;
+	}
+
+	ul {
+		font-size: 0;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		white-space: nowrap; 
+	}
+
+	li {
+		@include inline-block(top);
+		background: $jcarousel-background;
+		font-size: $body-font-size;
+		white-space: normal;
+		width: 100%!important;
+
+		&:first-child {
+			background: $white;
+		}
+	}
+
+img +
+	.textMaster.first {
+			right: 4.308em;
+		    top: 8.108em;
+		   @include breakpoint(1197) {
+		    top: 7.108em;
+		    }
+		   @include breakpoint(medium) {
+		    top: 8.108em;
+		    }
+	.slideTextContainer {
+    			width:38%;
+    			text-align:center;
+   
+	}  		
+	}
+
+	img {
+		display: block;
+		height: auto!important;
+		max-width: 100%;
+
+		+ .textMaster {
+
+			bottom: 0;
+			left: $margin;
+			margin: 0;
+			position: absolute;
+			right: $margin;
+			top: $margin;
+            text-align: center;
+
+			@include breakpoint(narrow) {
+				left: 0;
+				line-height: 1;
+				right: 0;
+				top: auto;
+			}
+
+		
+	
+		}
+
+
+	}
+
+	.textMaster {
+		a.btn-orange {
+			background-color: rgba(252, 216, 0, 0.89);
+			@include breakpoint(narrow) {
+					bottom: 10px;
+			}
+		}
+		&.first p {
+			    color: #fff;
+		}
+		.light & {
+			color: #fff;
+		}
+		.medium & {
+			color:#EEE;
+		}
+		.slideTextContainer {
+			width:38%;
+		}
+
+		.slideTextContainer.pull-right, 
+		.slideTextContainer.pull-left {
+			@include breakpoint(narrow) {
+				float:auto !important;
+				position:absolute;
+				width:100% !important;
+				bottom:0;
+			}
+		}
+		.slideTextContainer.pull-left {
+			position:relative;
+			left:34px;
+		}
+		
+		font-size: #{$body-font-size*1.64};
+		line-height: 1.25;
+		margin: $margin $margin 0;
+
+		@include breakpoint(medium) {
+			font-size: #{$body-font-size*1.08};
+		}
+
+		@include breakpoint(narrow) {
+			font-size: 0!important;
+		}
+
+		h2,h1,
+		p {
+			color: inherit;
+			font-family: "IntroRegular", sans-serif;
+			@include breakpoint(narrow) {
+				margin: 0;
+			}
+		}
+
+		h2 {
+			font-size: 1.750em;
+			line-height: 1.143;
+			text-transform: initial;
+			font-family: "IntroSemiBold", sans-serif;
+			letter-spacing: 0.023em;
+		}
+		h1 {
+			font-size: 2.250em;
+			line-height: 1.143;
+			text-transform: initial;
+			font-family: "IntroLight",sans-serif;
+			letter-spacing: 0.013em;
+			color:#fff;
+    		margin: 10px 0 5px;
+		span {			
+			font-family: "IntroSemiBold" !important;
+		}
+		
+		@include breakpoint(1197) {
+		    font-size: 1.75em;
+		}
+		}
+		h2.emphasisO {
+			font-size: 2.250em;
+			line-height: 1.143;
+			text-transform: initial;
+			font-family: "IntroLight",sans-serif;
+			letter-spacing: 0.013em;
+			color:#fff;
+    		margin: 0 0 5px;
+    		text-align:center;
+    		@include breakpoint(1197) {
+		    font-size:1em;
+		}
+		span {			
+			font-family: "IntroSemiBold" !important;
+		}
+
+		}
+
+
+		p {
+			line-height: inherit;
+		}
+	}
+
+	.btn-lg {
+		font-size: 1.1em;
+		@include breakpoint(1197) {
+			font-size:0.9em;
+		}
+	}
+}
+@-webkit-keyframes pulse {
+	0% { opacity: $jcarousel-opacity; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes pulse {
+	0% { opacity: $jcarousel-opacity; }
+	100% { opacity: 1; }
+}
+@-o-keyframes pulse {
+	0% { opacity: $jcarousel-opacity; }
+	100% { opacity: 1; }
+}
+@keyframes pulse {
+	0% { opacity: $jcarousel-opacity; }
+	100% { opacity: 1; }
+}
+.jcarousel-control {
+	@include border-radius(30px);
+	@include box-shadow(0 0 4px #f0efe7);
+	@include opacity(0);
+	@include transition(all .5s ease-in-out);
+	@include user-select(none);
+
+	background: $jcarousel-background;
+	cursor: pointer;
+	display: none;
+	height: 30px;
+	margin-top: -15px;
+	position: absolute;
+	text-align: center;
+	text-indent: 100%;
+	text-shadow: 0 0 1px #000;
+	top: 50%;
+	width: 30px;
+
+	&,
+	&:hover {
+		color: $white;
+		text-decoration: none;
+	}
+
+	// &:hover {
+
+	// 	// .cssanimations & {
+	// 	// 	@include animation(pulse 1s infinite alternate);
+	// 	// }
+	// }
+
+	&:after {
+		@include font-awesome-icon;
+		font-weight: 400;
+		left: -16px;
+		margin-left: -.5ex;
+		margin-top: -.5em;
+		position: absolute;
+		top: 50%;
+	}
+
+	&.inactive {
+		@include opacity(.25);
+		cursor: default;
+	}
+
+	@include breakpoint(narrow) {
+		display: none;
+	}
+}
+.jcarousel-control-prev {
+	left: 15px;
+
+	&:after {
+		content: "\f053";
+	}
+}
+.jcarousel-control-next {
+	right: 15px;
+
+	&:after {
+		content: "\f054";
+	}
+}
+.jcarousel-pagination {
+	@include backface-visibility(hidden);
+	@include tap-highlight-color;
+	// background: $jcarousel-background;
+	background: transparent;
+	font-size: 0;
+	// font-weight: 700;
+	line-height: $jcarousel-height;
+	text-align: center;
+	white-space: nowrap;
+	width: 100%;
+	border-bottom: 3px solid #FCD800;
+	bottom: 3px;
+	position: relative;
+
+	@include breakpoint(narrow) {
+		background: transparent;
+		line-height: normal;
+		position: relative;
+		border-bottom: 0;
+		bottom: 0;
+		top: 4px;
+	}
+
+	> a {
+		@include inline-block(top);
+		color: #222;
+
+		&,
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:first-child {
+			// border-left: $jcarousel-border;
+		}
+	}
+
+	.jcarousel-pagination-dot {
+		// border-right: $jcarousel-border;
+		font-size: 13px;
+		min-width: 15%;
+		padding: 0 1ex;
+		position: relative;
+		text-align: center;
+		width: auto;
+		font-family: "introRegular";
+	 	@include breakpoint(medium) {
+	 	min-width: 22%;
+	 	}
+		@include breakpoint(narrow) {
+			$dim: 6px;
+
+			@include border-radius(50%);
+			background: #cecece;
+			border: 1px solid #cecece;
+			font-size: 0;
+			height: $dim;
+			margin: #{$dim*2} $dim 0;
+			min-width: 0;
+			padding: 0;
+			width: $dim;
+		}
+	}
+
+	.active {
+		background: $white;
+		color:#000;
+		font-family: "introBold";
+		@include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.28));
+
+		@include breakpoint(narrow) {
+			background: #838383;
+			border-color: #838383;
+		}
+	}
+}
+
+#usaaHero{
+    .textMaster{
+        text-align: center;
+
+        a { 
+            margin-top: 70px;
+            
+
+        }
+
+        @include breakpoint(narrow) {
+            top: 30%;
+
+            a{
+                position: absolute;
+			    bottom: 0;
+            }
+
+            .slideTextContainer{
+                font-size: 18px;
+                width: 50% !important;
+                float: left !important;
+                position: relative;
+                bottom: initial;
+                left: 0;
+            } 
+		}
+
+        @media (max-width: 500px) {
+            top: 0;
+        }
+    }
+}
+
+

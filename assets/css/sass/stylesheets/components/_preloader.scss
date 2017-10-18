@@ -1,0 +1,211 @@
+
+/* ==========================================================================
+	Loading Spinner
+============================================================================= */
+
+
+html.loader-active {
+.ajax-loader-container {
+visibility: visible !important;
+z-index: 2000001;
+}
+}
+html.loader-active { 
+  body:after {
+      position:fixed;
+      content:"";
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:rgba(255,255,255,0.5) !important;
+      z-index:2000000;
+ 
+  }
+}
+
+.ajax-loader-container {
+   visibility: hidden;
+  display: block;
+  position: fixed;
+  top: 35%;
+  z-index: -2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin:0 auto;
+}
+
+.ajax-spinner-bars {
+  position: relative;
+  display: inline-block;
+  /* width: 100%; */
+  height: 12px;
+  margin: 0 auto;
+  z-index: #{$top-z-index/1000004};
+  left: 0;
+
+}
+
+.ajax-loader-message {
+    text-align: center;
+    margin-top: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: "Open Sans", Arial,sans-serif !important;
+    font-size: 15px;
+}
+
+
+.ajax-spinner-bars > div {
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background-color: #25363F;
+    -webkit-transform: translateZ(0);
+    opacity: 0.05;
+  -webkit-animation: fadeit 0.8s linear infinite;
+          animation: fadeit 0.8s linear infinite;
+}
+.ajax-spinner-bars > .bar-1 {
+  -webkit-transform: rotate(0deg) translate(0, -12px);
+      -ms-transform: rotate(0deg) translate(0, -12px);
+          transform: rotate(0deg) translate(0, -12px);
+  -webkit-animation-delay:0.05s;
+          animation-delay:0.05s;
+}
+.ajax-spinner-bars > .bar-2 {
+  -webkit-transform: rotate(22.5deg) translate(0, -12px);
+      -ms-transform: rotate(22.5deg) translate(0, -12px);
+          transform: rotate(22.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.1s;
+          animation-delay:0.1s;
+}
+.ajax-spinner-bars > .bar-3 {
+  -webkit-transform: rotate(45deg) translate(0, -12px);
+      -ms-transform: rotate(45deg) translate(0, -12px);
+          transform: rotate(45deg) translate(0, -12px);
+  -webkit-animation-delay:0.15s;
+          animation-delay:0.15s;
+}
+.ajax-spinner-bars > .bar-4 {
+  -webkit-transform: rotate(67.5deg) translate(0, -12px);
+      -ms-transform: rotate(67.5deg) translate(0, -12px);
+          transform: rotate(67.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.2s;
+          animation-delay:0.2s;
+}
+.ajax-spinner-bars > .bar-5 {
+  -webkit-transform: rotate(90deg) translate(0, -12px);
+      -ms-transform: rotate(90deg) translate(0, -12px);
+          transform: rotate(90deg) translate(0, -12px);
+  -webkit-animation-delay:0.25s;
+          animation-delay:0.25s;
+}
+.ajax-spinner-bars > .bar-6 {
+  -webkit-transform: rotate(112.5deg) translate(0, -12px);
+      -ms-transform: rotate(112.5deg) translate(0, -12px);
+          transform: rotate(112.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.3s;
+          animation-delay:0.3s;
+}
+.ajax-spinner-bars > .bar-7 {
+  -webkit-transform: rotate(135deg) translate(0, -12px);
+      -ms-transform: rotate(135deg) translate(0, -12px);
+          transform: rotate(135deg) translate(0, -12px);
+  -webkit-animation-delay:0.35s;
+          animation-delay:0.35s;
+}
+.ajax-spinner-bars > .bar-8 {
+  -webkit-transform: rotate(157.5deg) translate(0, -12px);
+      -ms-transform: rotate(157.5deg) translate(0, -12px);
+          transform: rotate(157.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.4s;
+          animation-delay:0.4s;
+}
+.ajax-spinner-bars > .bar-9 {
+  -webkit-transform: rotate(180deg) translate(0, -12px);
+      -ms-transform: rotate(180deg) translate(0, -12px);
+          transform: rotate(180deg) translate(0, -12px);
+  -webkit-animation-delay:0.45s;
+          animation-delay:0.45s;
+}
+.ajax-spinner-bars > .bar-10 {
+  -webkit-transform: rotate(202.5deg) translate(0, -12px);
+      -ms-transform: rotate(202.5deg) translate(0, -12px);
+          transform: rotate(202.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.5s;
+          animation-delay:0.5s;
+}
+.ajax-spinner-bars > .bar-11 {
+  -webkit-transform: rotate(225deg) translate(0, -12px);
+      -ms-transform: rotate(225deg) translate(0, -12px);
+          transform: rotate(225deg) translate(0, -12px);
+  -webkit-animation-delay:0.55s;
+          animation-delay:0.55s;
+}
+.ajax-spinner-bars > .bar-12 {
+  -webkit-transform: rotate(247.5deg) translate(0, -12px);
+      -ms-transform: rotate(247.5deg) translate(0, -12px);
+          transform: rotate(247.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.6s;
+          animation-delay:0.6s;
+}
+.ajax-spinner-bars> .bar-13 {
+  -webkit-transform: rotate(270deg) translate(0, -12px);
+      -ms-transform: rotate(270deg) translate(0, -12px);
+          transform: rotate(270deg) translate(0, -12px);
+  -webkit-animation-delay:0.65s;
+          animation-delay:0.65s;
+}
+.ajax-spinner-bars > .bar-14 {
+  -webkit-transform: rotate(292.5deg) translate(0, -12px);
+      -ms-transform: rotate(292.5deg) translate(0, -12px);
+          transform: rotate(292.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.7s;
+          animation-delay:0.7s;
+}
+.ajax-spinner-bars > .bar-15 {
+  -webkit-transform: rotate(315deg) translate(0, -12px);
+      -ms-transform: rotate(315deg) translate(0, -12px);
+          transform: rotate(315deg) translate(0, -12px);
+  -webkit-animation-delay:0.75s;
+          animation-delay:0.75s;
+}
+.ajax-spinner-bars> .bar-16 {
+  -webkit-transform: rotate(337.5deg) translate(0, -12px);
+      -ms-transform: rotate(337.5deg) translate(0, -12px);
+          transform: rotate(337.5deg) translate(0, -12px);
+  -webkit-animation-delay:0.8s;
+          animation-delay:0.8s;
+}
+@-webkit-keyframes fadeit{
+    0%{ opacity:1; }
+    100%{ opacity:0;}
+}
+@keyframes fadeit{
+    0%{ opacity:1; }
+    100%{ opacity:0;}
+}
+
+
+
+
+// .loading-animator {
+//     -moz-border-bottom-colors: none;
+//     -moz-border-left-colors: none;
+//     -moz-border-right-colors: none;
+//     -moz-border-top-colors: none;
+//     @include animation(pace-spinner 400ms linear infinite);
+//     @include border-image(none);
+//     @include border-radius(10px);
+//     border: 2px solid;
+//     border-color: rgba(0,0,0,.4) rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,.4);
+//     display: block;
+//     height: 14px;
+//     margin-left: 40%;
+//     width: 14px;
+//     z-index: #{$top-z-index/10000 * 2};
+// }

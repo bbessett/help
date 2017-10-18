@@ -1,0 +1,58 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+// /compass-sass-mixins/lib/compass
+@import "../../../components/compass-sass-mixins/lib/compass";
+@import "../../../components/compass-sass-mixins/lib/compass/css3";
+@import "../../../components/compass-sass-mixins/lib/compass/css3/user-interface";
+@import "../../../components/compass-sass-mixins/lib/compass/css3/transition";
+ 
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins'; 
+
+// 2. Vendors
+@import
+  'vendor/normalize';
+
+// @import "../../../components/animatewithsass/animate.scss";  
+
+// 3. Base stuff
+@import
+  'base/base', 
+  'base/fonts',
+  'base/typography',
+  'base/depreciated-typography',
+  'base/helpers',
+  'base/general';
+ 
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components 
+@import
+  'components/button',
+  'components/search',
+  'components/tables',
+  'components/component-pricing',
+  'components/component-seo',
+  'components/component-hero',
+  'components/forms',
+  'components/preloader';
+
+  // 'components/mini-search';
+
+// 6. Page-specific styles
+@import
+  'pages/home', 
+  'pages/marketing';
+
+// 7. Themes
+@import
+  'themes/default';
+
+ @import 
+ 'depreciated/main';

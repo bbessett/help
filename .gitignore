@@ -5,6 +5,7 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
+
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
@@ -45,3 +46,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+bower_components/*
+.DS_Store
+node_modules
+npm-debug.log
+bower_components
+dist
+.sass-cache
+.awspublish*
+config.json
+assets/components*

@@ -1,0 +1,635 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+/* ========================================================================== */
+/*   Buttons                                                                  */
+/* ========================================================================== */
+
+button {
+-moz-text-shadow:none;
+-webkit-text-shadow:none;
+text-shadow: none;
+}
+
+.btn {
+  @include user-select(none !important);
+  display: inline-block;
+  padding: 3px 12px 3px 12px;
+  margin-bottom: 0px;
+  font-family:"IntroSemiBold" !important;
+  font-size: 14px;
+  color:#0295BE;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-user-select: none;
+  background-color:#FFF;
+  border-radius: 0;
+  &:active {
+    @include box-shadow(inset 0px 1px 2px rgba(0, 0, 0, 0.3));
+
+  }
+  .csspie & {
+    position: relative;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+// Hacky Button Overides
+.mac  {
+  .btn { 
+    padding-top: 8px;
+  }
+  @include breakpoint(large_mobile) {
+      padding-top: 8px;
+  }
+}
+
+.action {
+  .btn:first-child {
+    margin-right:15px;
+  }
+}
+.btn{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+
+.action {
+  .btn.btn-medium, .btn.btn-med {
+    @include breakpoint(tablet) {   
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+}
+.btn.btn-sm:first-child {
+  margin-right:5px;
+
+}
+.btn-orange, .btn-yellow {
+  background-color: $button-yellow;
+  text-transform: uppercase;
+  border:1px solid $button-yellow;
+  &, 
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $black;
+
+  }
+
+  &:hover,
+  &:active {
+//todo
+    // @include transition(.1s ease-in-out);
+    background-color: $button-yellow-hover;
+    border:1px solid $button-yellow-hover;
+    color: #000;
+
+  }
+
+  &,
+  &.disabled:hover,
+  &.disabled:focus,
+  &.disabled:active,
+  &.disabled.active,
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active,
+  &[disabled].active,
+  fieldset[disabled] &:hover,
+  fieldset[disabled] &:focus,
+  fieldset[disabled] &:active,
+  fieldset[disabled] &.active {
+    background-color:$button-yellow;
+    color: $black;
+  }
+
+
+}
+
+
+.btn-brown, .btn-white, #Cancel {
+  color: $black;
+  border-radius: 0px;
+  background-color: #fff !important;
+  text-transform: uppercase;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: #fff;
+    color: $black;
+    background-color: #EDEDED;
+  }
+
+  &,
+  &.disabled:hover,
+  &.disabled:focus,
+  &.disabled:active,
+  &.disabled.active,
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active,
+  &[disabled].active,
+  fieldset[disabled] &:hover,
+  fieldset[disabled] &:focus,
+  fieldset[disabled] &:active,
+  fieldset[disabled] &.active {
+    background-color: #82786d;
+    color: $white;
+  }
+}
+
+.btn-white {
+  color:$blue !important;
+}
+
+.btn-clear {
+  border-radius: 0px;
+  background-color: transparent !important;
+  text-transform: uppercase;
+  color: #FFF !important;
+  border: 1px solid #fff !important;
+  height: 28px;
+  padding: 4px 14px 12px 14px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: rgba(0,0,0,0.15) !important;
+    color: $white;
+  }
+
+  &,
+  &.disabled:hover,
+  &.disabled:focus,
+  &.disabled:active,
+  &.disabled.active,
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active,
+  &[disabled].active,
+  fieldset[disabled] &:hover,
+  fieldset[disabled] &:focus,
+  fieldset[disabled] &:active,
+  fieldset[disabled] &.active {
+    background-color: $light-gray;
+    color: $white;
+  }
+}
+
+.blue-border, .form-group #Cancel, #Cancel {
+  border: 1px solid $blue !important;
+  color:$blue !important;
+
+  &:hover {
+    border: 1px solid $blue-hover !important;
+    background-color: #EDEDED !important;
+
+  }
+}
+.btn.yellow-hover {
+  &:hover {
+    background:$button-yellow !important;
+    border: 1px solid $button-yellow !important;
+
+  }
+}
+
+.tab-link,
+.read-more,
+.learn-more {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.tab-link {
+  // @include border-radius(4px 4px 0 0);
+  background: $blue;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  .csspie & {
+    position: relative;
+  }
+
+  &:hover {
+    color:#fff;
+    background:$blue-hover;
+  }
+  &:active {
+    color:#fff;
+    background:$blue-hover;
+  }
+  &.icon {
+    font-family: inherit;
+    line-height: inherit;
+
+    &:after {
+      @include font-awesome-icon;
+      @include inline-block(baseline);
+      content: "\00a0\f04b";
+      text-transform: none;
+    }
+  }
+}
+.read-more {
+  color: #2c7bb3;
+  display: block;
+  font-size: .9em;
+  // font-weight: 700;
+  padding: 0 15px 0 0;
+
+  &.icon {
+    font-family: inherit;
+    line-height: inherit;
+    position: relative;
+
+    &:after {
+      content: "";
+      border-style: solid;
+      border-width: 5px 0 5px 10px;
+      border-color: transparent transparent transparent #2c7bb3;
+      height: 0;
+      margin-left: .5ex;
+      margin-top: -5px;
+      position: absolute;
+      top: 50%;
+      width: 0;
+    }
+  }
+}
+
+.sm-feat-tb 
+{
+
+  > tbody {
+    
+    >tr {
+      td { 
+        padding: 13px 5px 0px;
+      }
+      td[data-icon] {
+        font-size: 38px;
+        color:$blue;
+        position: relative;
+        bottom: 6px;
+      }
+    }
+  }
+}
+// .learn-more {
+//  font-size: 12px;
+//  font-weight: 700;
+//  padding-left: 0;
+//  text-align: left;
+
+//  &:after {
+//    content: '\00a0\00bb';
+//    position: absolute;
+//  }
+// }
+
+/* ========================================================================== */
+/*   Misc/Utilities                                                           */
+/* ========================================================================== */
+
+/* ==========================================================================
+    Buttons Update
+============================================================================= */
+
+.btn {
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 20px 15px 20px;    
+  border: 0;  
+  height: auto;
+  color: $black;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: normal;
+  word-wrap: break-word;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  @include breakpoint($small-down) {
+      display: block;
+      width: 100%;
+  }
+  &:hover {
+      color: $black;
+  }
+  &.btn-black {
+      background: $black;
+      &:hover {
+          background: lighten($black, 8%);
+      }
+  }
+  &.btn-primary {
+      background: $brand-primary;
+      &:hover {
+          background: lighten($brand-primary, 8%);
+      }
+  }
+  &.btn-warning {
+      background: $brand-warning;
+      &:hover {
+          background: lighten($brand-warning, 8%);
+      }
+  }
+  &.btn-danger {
+      background: $brand-danger;
+      &:hover {
+          background: lighten($brand-danger, 8%);
+      }
+  }
+  &.btn-info {
+      background: $brand-info;
+      &:hover {
+          background: lighten($brand-info, 8%);
+      }
+  }
+  &.btn-success {
+      background: $brand-success;
+      &:hover {
+          background: lighten($brand-success, 8%);
+      }
+  }
+  &.btn-outline-white,
+  &.btn-outline-black,
+  &.btn-outline-warning,
+  &.btn-outline-primary,
+  &.btn-outline-danger,
+  &.btn-outline-info,
+  &.btn-outline-success {
+      line-height: 1;
+      padding: 14px 16px 19px 16px;
+      color: #000;
+  }
+  &.btn-outline-white {
+      border: 4px solid #fff;
+      color: #fff;
+      &:hover {
+          color: #000;
+          border: 4px solid #fff;
+          background: #fff;
+      }
+  }
+  &.btn-outline-black {
+      border: 4px solid #000;
+  }
+  &.btn-outline-warning {
+      border: 4px solid $brand-warning;
+      &:hover {
+          border: 4px solid $brand-warning;
+          background: $brand-warning;
+      }
+  }
+  &.btn-outline-primary {
+      border: 4px solid $brand-primary;
+      background: transparent;
+      &:hover {
+          border: 4px solid $brand-primary;
+          background: $brand-primary;
+      }
+  }
+  &.btn-outline-danger {
+      border: 4px solid $brand-danger;
+  }
+  &.btn-outline-info {
+      border: 4px solid $brand-info;
+  }
+  &.btn-outline-success {
+      border: 4px solid $brand-success;
+  }
+  &.btn-xlg {
+      padding: 22px 57px;
+      font-size: 20px !important;
+  }
+  &.btn-lg {
+      padding: 15px 35px;
+      font-size: 22px !important;
+  }
+  &.btn-sm {
+      padding: 6px 16px 9px 16px;
+      font-size: 13px !important;
+  }
+  &.btn-xs {
+      padding: 6px 20px;
+      font-size: 11px !important;
+  }
+  &.btn-full {
+      display: block;
+      width: 100%;
+  }
+  &.btn-wide {
+      padding-left: 40px;
+      padding-right: 40px;
+  }
+  &.btn-blue {
+    background:transparent;
+    border:3px solid #00a6ca;
+    color:#000;
+    margin-bottom:15px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.05s;
+    transition-duration: 0.05s;
+r    &:hover {
+      background:#00a6ca;
+      color:#fff;
+    }
+  
+
+} 
+
+}
+
+.btn-group {
+  .btn {
+      margin: 10px;
+      @include breakpoint($small) {
+          margin: 0 20px;
+      }
+  }
+}
+
+
+.add-bottom {
+  margin-bottom: 20px;
+}
+.add-top {
+  margin-top: 20px;
+}
+.add-half-top {
+  margin-top: 10px;
+}
+.dim-bg {
+  background: #717171;
+}
+.highlight {
+  background: $white;
+
+  .divider {
+
+    @include breakpoint(narrow) {
+      border-right: 0 none;
+    }
+  }
+}
+.divider {
+  border-right: 1px solid $blue;
+}
+.shadow-top {
+  @include background( url(../img/global/shadow-top.png) );
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+$border: 1px solid #cac4ba;
+.border-top {
+  border-top: $border;
+}
+.border-bottom {
+  border-bottom: $border;
+}
+.small-type {
+  font-size: 11px;
+}
+div.center {
+  text-align: center;
+}
+.pull-bottom {
+  margin-bottom: 35px;
+}
+.pull-top {
+  margin-top: 35px;
+}
+.bold {
+  font-weight: 700;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.inverted {
+  @include inline-block;
+  color: $white;
+  padding: {
+    left: 10px;
+    right: 10px;
+  };
+}
+
+/*Added by Jon. The following code must be added into SCSS files properly. The last SCSS edits were not deployed back to the TeamSite CMS.*/
+.btn-orange {
+  color: #000 !important;
+}
+
+  .sidebar-menu > li > a {
+    color: inherit !important;
+  }
+
+  .sidebar-title {
+    color: #0295BE !important;
+  }
+
+
+
+/* ========================================================================== */
+/*   Sprites & Icons                                                          */
+/* ========================================================================== */
+.glyphs 
+{ 
+
+	.icon {
+	margin: 0;
+	margin-right: -4px;
+	margin-left: 0 !important;
+	padding: 6px 0;
+	height: auto;
+	width: 38px;
+	color: #00A6CB;
+	overflow: hidden;
+	float: left;
+	font-size: 40px;
+	line-height: 42px;
+	position: relative;
+	-webkit-transform: translateZ(0);
+	&:hover {
+	text-decoration:none !important;
+	}
+}
+	
+}
+.glyphs.glyphs-large {
+	.icon {
+	width: 100%;
+	font-size: 0px;
+	height: 84px;
+	color:$blue-hover;
+	 &:before {
+	 	font-size:90px;
+	 }
+   }  
+}
+
+.hd.glyphs .icon, .key-points.glyphys .icon {
+	margin-right: -15px;
+	position: relative;
+	left: -13px;
+	margin-left: 0;
+	padding: 4px 0;
+	height: 40px;
+	width: 45px;
+	color: #00A6CB !important;
+	overflow: hidden;
+	float: left;
+	font-size: 43px;
+}
+
+
+.social-wrap {
+	h5 {
+		margin-bottom:0;
+	}
+}
+.social-bottom,
+.social-top,
+.tv ul,
+.secure-icons,
+.secure-icons-footer {
+	font-size: 0;
+	list-style-type: none;
+	overflow: hidden;
+	padding-left: 0;
+	white-space: nowrap;
+}
+.social-bottom,
+.social-top,
+.secure-icons-footer {
+	@include user-select(none);
+
+	a:hover {
+		@include opacity(.75);
+	}
+}

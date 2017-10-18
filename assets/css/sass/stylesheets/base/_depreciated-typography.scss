@@ -1,0 +1,262 @@
+/* ========================================================================== */
+/*   Headings                                                                 */
+/* ========================================================================== */
+.heading {
+	margin:0 0 30px 0; 
+	letter-spacing: 0.7px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5, 
+h6,
+.h1, 
+.h2, 
+.h3, 
+.h4, 
+.h5, 
+.h6
+ {	
+ 	font-family:"IntroRegular"; 
+	font-weight:400;
+	letter-spacing: -1px; 
+	margin: 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: normal;
+}
+h4,
+h5,
+h6 {
+	margin: 0 0 15px;
+}
+
+// h1,
+// h4 {
+// 	text-transform: initial;
+// }
+.h1, h1 {
+	font-size:42px;
+	font-family:"IntroSemiBold";
+	font-weight:400; 
+	line-height:1.2em;
+	margin-top:15px;
+	color: $blue;
+	//font-size: 2.500em;
+	font-size: 220.0%;
+	margin: 10px 0 16px;
+}
+.h2, h2{
+	font-size: 32px; 
+	font-weight:300; 
+	line-height:36px; 
+	font-family:"IntroLight";
+	margin-bottom:15px;
+	color: $blue;
+	//font-size: 2.188em;
+	font-size: 218.8%;
+	margin: 0 0 10px;
+}
+.h3, h3 {
+	font-size:26px; 
+	margin: 20px 0 5px 0; 
+	line-height:32px;
+	color: $blue;
+	//font-size: 1.875em;
+	font-size: 187.5%;
+	margin-bottom: 33px;
+}
+.h4, h4 {
+	font-family:"IntroSemiBold"; 
+	font-size:26px; 
+	margin: 20px 0 5px 0; 
+	line-height:32px;
+	color: $blue;
+	//font-size: 1.125em;
+	font-size: 130.0%;
+	line-height: 24px;
+	margin-bottom: 15px;
+
+}
+h5 {
+	font-size:16px; 
+	font-family:"IntroSemiBold"; 
+	line-height:1.4em;
+	font-size: 115%;
+}
+h6 {
+	font-size:14px; 
+	font-family:"IntroSemiBoldCaps"; 
+	margin:10px  0;
+	//font-size: 1em;
+	font-size: 100%;
+	line-height: 18px;
+}
+h1.big {
+	//font-size: 4.2em;
+	font-size: 420%;
+	line-height: 54px;
+}
+h1.short,
+h2.short {
+	margin-bottom: 10px;
+}
+h3.short,
+h4.short,
+h5.short,
+h6.short {
+	margin-bottom: 9px;
+}
+h1.shorter,
+h2.shorter,
+h3.shorter,
+h4.shorter,
+h5.shorter,
+h6.shorter {
+	margin-bottom: 0;
+}
+h1.tall,
+h2.tall,
+h3.tall,
+h4.tall,
+h5.tall,
+h6.tall {
+	margin-bottom: 33px;
+}
+h1.taller,
+h2.taller,
+h3.taller,
+h4.taller,
+h5.taller,
+h6.taller {
+	margin-bottom: 44px;
+}
+h1.spaced,
+h2.spaced,
+h3.spaced,
+h4.spaced,
+h5.spaced,
+h6.spaced {
+	margin-top: 32px;
+}
+h1.more-spaced,
+h2.more-spaced,
+h3.more-spaced,
+h4.more-spaced,
+h5.more-spaced,
+h6.more-spaced {
+	margin-top: 44px;
+}
+.modal-header {
+
+	h3 {
+		color: #333;
+		text-transform: none;
+	}
+}
+// h1.text-shadow,
+// h2.text-shadow,
+// h3.text-shadow,
+// h4.text-shadow,
+// h5.text-shadow {
+// 	// @include text-shadow( 1px 1px 0 rgba(0,0,0,.2) );
+// }
+// .emphasisG {
+// 	color: $blue; /* blue */
+// }
+// .emphasisP {
+// 	color: #73245e; /* purple */
+// }
+// .emphasisB {
+// 	color: #2c7bb3; /* blue */
+// }
+// .emphasisO {
+// 	color: #df8c19; /* orange */
+// 	text-transform: none;
+// }
+// .emphasisT {
+// 	color: #00a3ad; /* teal */
+// }
+// .dim {
+// 	color: #717171; /* gray */
+// }
+.dark {
+	color: #363635; /* dark gray */
+}
+/* Headings Modified for SEO deck */
+h2.emphasisO {
+	// color: $button-yellow;
+	//font-size: 2.2em;
+	font-size: 210%;
+	line-height: 34px;
+	margin: 10px 0 16px;
+	font-family:"IntroSemiBold";
+}
+.bCopy {
+	color: $body-text-color;
+	font-family: $body-font-family;
+	font-size: $body-font-size;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 18px;
+	margin: 0 0 20px;
+
+	&.lg {
+		//font-size: 1.125em;
+		font-size: 112.5%;
+		font-weight: 700;
+	}
+}
+
+/* ========================================================================== */
+/*   Paragraphs                                                               */
+/* ========================================================================== */
+
+
+p {
+	line-height: 20px;
+	margin: 0 0 20px;
+	font-size:14px;
+
+	.alternative-font {
+		@include inline-block(top);
+		color: #ccc;
+		// font-family: "Shadows Into Light", cursive;
+		//font-size: 1.6em;
+		font-size: 160%;
+		margin-bottom: -6px;
+		margin-top: -15px;
+		position: relative;
+		top: 3px;
+	}
+
+	&.featured {
+		//font-size: 1.6em;
+		font-size: 160%;
+		//line-height: 1.5em;
+		line-height: 1.5;
+	}
+
+	&.short {
+		margin-bottom: 10px;
+	}
+
+	&.shorter {
+		margin-bottom: 0;
+	}
+
+	&.tall {
+		margin-bottom: 20px;
+	}
+
+	&.taller {
+		margin-bottom: 40px;
+	}
+}

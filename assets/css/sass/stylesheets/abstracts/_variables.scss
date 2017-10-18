@@ -1,0 +1,220 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+$top-z-index                    : 10000000;
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'IntroRegular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+$body-font-family: 'IntroRegular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+$IntroBold: 'IntroBold', 'Helvetica Neue Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+$IntroCaps: 'IntroCaps', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+
+$IntroSemiBold : 'IntroSemiBold', 'Helvetica', 'Arial', sans-serif !default;
+
+$IntroLight : 'IntroLight', 'Helvetica', 'Arial' sans-serif !default;
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+$body-text-color				: #000;
+$body-font-size					: 13px;
+$body-font-weight				: 400;
+$body-font-small-size			: 11px;
+$body-font-family				: "tu-icon-font", Helvetica, Verdana, Arial, sans-serif;
+$body-line-height				: 1.47;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(51, 51, 51) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(2, 149, 190) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+$text-blue: #00a6ca !default;
+
+// Background
+$background2					: #f6f9e9;
+$secondary						: #ededed;
+// New Branding Background
+$background1					: #ededed;
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+ // Colors
+$body-bg: #fff;
+$text-color: #000000;
+$black: #000000;
+$white: #ffffff; 
+$gray-darker: #424242;
+$gray-dark: #494949;
+$gray: #A9A9A9;
+$gray-medium: #dadada; 
+$gray-light: #eeeeee;
+$gray-lighter: #F5F5F5;
+$brand-primary: #00A6CA;
+$brand-success: #6aac2d;
+$brand-info: #00A6CA;
+$brand-warning: #fcd800;
+$brand-danger: #C80000;
+$link-color: $brand-primary;
+$link-hover-color: lighten($link-color, 8%);
+// Colors
+$dark-gray						: #2c2c2c;
+$med-gray						: #ddd;
+$light-gray						: #ededed;
+$white							: #fff;
+$blue-green						: #4d917b;
+$brown							: #94866f;
+$gradient1						: #fafafa;
+//New Branding Blue
+
+
+// Buttons
+
+$blue							: #0295BE;
+$blue-hover				: #00A6CA;
+$yellow           : #FCD800;
+$yellow-hover     : #E0C000;
+
+// Buttons
+$button-orange					: #f8951d;
+$button-orange-hover			: #e68c1b;
+
+
+$button-red						: #D74025;
+$button-gray					: #dedede;
+$button-brown					: #83786d;
+
+
+// New Branding Button
+$button-yellow					: #FCD800;
+$button-yellow-hover 		: #E0C000;
+
+$blue-button 					: 1px solid $blue;
+
+// Top Menu
+$menu1							: #EDEDED;
+$menu2							: #39710e;
+$menu_linkcolor					: #000;
+$menu_height					: 44px;
+$small_menu_height				: 23px;
+$menu_hover_hover_solid			: #fff;
+$menu_link_border_left_color	: #fff;
+$menu_link_border_right_color	: #fff;
+$menu_link_color				: #000;
+$dropdown_gradient1				: $gradient1;
+$dropdown_gradient2				: #ebebd2;
+ 
+
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-sm-max: ($screen-sm-min - 1);
+$screen-md-max: ($screen-md-min - 1);
+$extra-small-down: ( max: 480px);
+$small-down: ( max: $screen-sm-max);
+$medium-down: ( max: $screen-md-max);
+$small: ( min: $screen-sm);
+$medium: ( min: $screen-md);
+$large: ( min: $screen-lg);
+$small-only: ( min: map-get($small, min), max: map-get($medium, min) - 1);
+$medium-only: ( min: map-get($medium, min), max: map-get($large, min) - 1);
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+// Main
+$pricing-box-gradient1			: $white;
+$pricing-box-gradient2			: #f4ecc9;
+$radius							: 0;
+// Forms
+$form-field-border-color		: #939393;
+$form-field-border-hover-color	: #000;
+$form-field-bg-hover-color		: #EDEDED;
+$form-color-red					: #D74025;
+$form-text-red					: #D74025;
+$form-field-height				: 30px;
+
+// jCarousel
+$jcarousel-background			: #dad8d9;
+$jcarousel-border				: 1px solid #cac4ba;
+$jcarousel-height				: 44px;
+$jcarousel-opacity				: .4;

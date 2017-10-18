@@ -1,0 +1,21 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+h2 {
+  text-align: left;
+  margin-bottom:40px;
+  margin-top:20px;
+  font-family:$IntroSemiBold;
+  font-size: 2.2rem;
+  // font-weight: 600;
+} 
+
+h6, .eyebrow {
+font-size: 10px;
+font-family: $IntroCaps;
+font-weight: 600;
+}
